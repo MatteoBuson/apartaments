@@ -1,0 +1,38 @@
+<div id="<%= dom_id apartament %>">
+
+  <% if apartament.foto.attached? %>
+    <%= image_tag url_for(apartament.foto), class: 'w-100', style: 'max-width: 500px;' %>
+  <% end %>
+
+
+  <p>
+    <strong>Titolo:</strong>
+    <%= apartament.titolo %>
+  </p>
+
+  <p>
+    <strong>Luogo:</strong>
+    <%= apartament.luogo %>
+  </p>
+
+  <p>
+    <strong>Piscina:</strong>
+    <%= apartament.piscina %>
+  </p>
+
+  <p>
+    <strong>Bagno:</strong>
+    <%= apartament.bagno %>
+  </p>
+
+  <p>
+    <strong>Vista mare:</strong>
+    <%= apartament.vista_mare %>
+  </p>
+
+  <p>
+    <strong>Cucina:</strong>
+    <%= apartament.cucina %>
+  </p>
+
+</div>

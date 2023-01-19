@@ -1,0 +1,19 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  
+  <h1>Appartamenti</h1>
+
+  <%= link_to "Nuovo appartamento", new_apartament_path, class: 'btn btn-warning w-100' %>
+
+  <div id="apartaments" class="row">
+    <% @apartaments.each do |apartament| %>
+      <div class="col-4">
+        <%= render apartament %>
+        <p>
+          <%= link_to "Dettagli", apartament, class: 'btn btn-primary w-100' %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+</div>

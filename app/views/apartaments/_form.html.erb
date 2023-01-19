@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <%= form_with(model: apartament) do |form| %>
+    <% if apartament.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(apartament.errors.count, "error") %> prohibited this apartament from being saved:</h2>
+
+        <ul>
+          <% apartament.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :titolo, class: 'from-label' %>
+      <%= form.text_area :titolo, class: 'form-control' %>
+    </div>
+
+    <div>
+      <%= form.label :luogo, class: 'from-label' %>
+      <%= form.text_area :luogo, class: 'form-control' %>
+    </div>
+
+  
+    <div>
+      <%= form.label :bagno, class: 'from-label' %>
+      <%= form.text_area :bagno, class: 'form-control' %>
+    </div>
+
+    <div>
+      <%= form.label :cucina, class: 'from-label' %>
+      <%= form.text_area :cucina, class: 'form-control' %>
+    </div>
+
+    <div>
+    <%= form.label :vista_mare, class: 'from-label' %>
+    <%= form.check_box :vista_mare, class: 'form-check' %>
+  </div>
+    
+    <div>
+      <%= form.label :piscina, class: 'from-label' %>
+      <%= form.check_box :piscina, class: 'form-check' %>
+    </div>
+
+    <div class="mb-3">
+    <%= form.label :foto, class: 'form-label' %>
+    <%= form.file_field :foto, class: 'form-control' %>
+  </div>
+
+
+    <div>
+      <%= form.submit 'Salva', class: 'btn btn-primary w-100' =%>
+    </div>
+  <% end %>
+</div>

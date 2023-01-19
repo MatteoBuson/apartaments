@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Modifica appartamento</h1>
+
+  <%= render "form", apartament: @apartament %>
+
+  <br>
+
+  <div>
+    <%= link_to "Visualizza l'appartamento", @apartament , class:'btn btn-success w-100'%> 
+    <h1>  </h1>
+    <%= link_to "Torna agli appartamenti", apartaments_path, class:'btn btn-secondary w-100' %>
+  </div>
+</div>

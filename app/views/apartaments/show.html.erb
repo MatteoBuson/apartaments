@@ -1,0 +1,15 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @apartament %>
+
+  <div>
+    <%= link_to "Modifica", edit_apartament_path(@apartament), class:'btn btn-warning w-100' %> 
+     
+    <%= button_to "Ellimina", @apartament, method: :delete, class:'btn btn-danger w-100' %> 
+
+    <%= link_to "Torna agli appatamenti", apartaments_path, class:'btn btn-secondary w-100'%>  
+
+    
+  </div>
+</div>
